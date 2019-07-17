@@ -1,0 +1,46 @@
+hillelkh, gabriel121
+Hillel Kholmyansky (203283734), Gabriel Ben-Hur (203817614)
+EX: 2
+
+FILES:
+uthreads.cpp -- The Library  - This is what we were asked to imlement
+Thread.h 	 -- A class header a single Thread
+Thread.cpp 	 -- A class cpp a single Thread
+Makefile     -- The makefile
+README       -- Explenation
+
+REMARKS:
+--------
+
+ANSWERS:
+
+Q1:
+One usage of user-level threads to implement multi threading without using the operating system
+and that's because the user-level threads does not need the operating
+system and therefor the operating system is not aware of the the threads.
+Unlike Kernel-level threads, which are handled by the operating system.
+
+Q2:
+The first advantage is that processes cannot share any resources between.
+However threads of the same process can share resources between them.
+Another advantage is that changes to the main process does not affect the other sub process while changes
+to the main thread affects the the other threads.
+
+One disadvantage of creating new process is that it costs more than creating a new thread,
+and it is easier to switch between threads than between processes.
+Another advantage is that, processes needs to use IPC to communicate with each other
+while threads can easily communicate because of the shared resources we mentioned.
+
+Q3:
+a.Oopene the Shotwell app and checke the pid (31645).
+b. kill the process with pid 31645.
+c. the first interrupt been send by the keyboard to shell, by pressing enter the
+   system receives the interrupt and executes the command.
+   The user function "kill" executes system call to the function "kill(31645, SIGTERM)".
+
+Q4:
+real time - the time passed in real life
+virtual time - the time passed in the process
+We use real time with applications that are synched with the real time in the world - like waze.
+We use virtual time when we count the time passed in the program and ignore the real time
+that had passed while the CPU didn't perform anything.
